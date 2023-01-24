@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: ls ${{ github.workspace }}
+      - run: pwd
+      - run: node -v
       - run: cd auth
       - run: npm install
       - run: npm run test:ci
